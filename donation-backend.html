@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donation Received</title>
+  <meta charset="utf-8">
+</head>
+<body style="font-family:Arial; padding:30px;">
+  <h2>Donation Received Successfully</h2>
+  <p>Thank you for your generous support.</p>
+
+  <h3>Donation Details</h3>
+  <p><strong>Name:</strong> <span id="name"></span></p>
+  <p><strong>Phone:</strong> <span id="number"></span></p>
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <p><strong>Amount:</strong> ₹<span id="amount"></span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("name").textContent = params.get("name");
+    document.getElementById("number").textContent = params.get("number");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("amount").textContent = params.get("amount");
+  </script>
+</body>
+</html>

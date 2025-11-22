@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Harvest Blue Mission</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+  <style>
+    /* Backend page hidden initially */
+    #backendPage {
+      display:none;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body style="background: var(--page-bg-mid);">
+  <header class="topbar">
+    <div style="text-align:center;">
+      <div style="font-size:0.95rem; opacity:0.95;">Get in touch — Harvest Blue Mission</div>
+    </div>
+  </header>
+
+  <nav class="mainnav">
+    <div class="logo-slot">
+      <div class="logo-placeholder"></div>
+      <div style="font-weight:700;">Harvest Blue</div>
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html"><span></span>Home</a></li>
+      <li><a href="how-it-works.html"><span></span>How It Works</a></li>
+      <li><a href="projects.html"><span></span>Projects</a></li>
+      <li><a href="sdg6.html"><span></span>SDG 6</a></li>
+      <li><a href="contact.html" class="active"><span></span>Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <h1>Contact Us</h1>
+
+    <!-- ORIGINAL FORM (UNCHANGED) -->
+    <div class="contact-form" id="contactForm">
+      <label for="name">Name</label>
+      <input id="name" name="name" required/>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required/>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" id="sendBtn" style="padding:0.7rem 1rem; border-radius:6px; background:var(--card-accent); color:white; border:none;">Send</button>
+    </div>
+
+    <section style="margin-top:1.2rem;">
+      <h2>Our address & collaboration</h2>
+      <p>
+        Harvest Blue Mission partners with NGOs, schools and local governments. If you are interested in volunteering, sponsoring a project, or partnering on research and monitoring, please write to us — use the form above or email us at <strong>info@harvestblue.org</strong> (example).
+      </p>
+      <p style="max-width:720px;">
+        We welcome offers of local materials supply, training volunteers, or funding small demonstration sites. We typically onboard partners on a first pilot site to document costs and outcomes before scaling.
+      </p>
+    </section>
+
+
+    <!-- ⭐⭐⭐ BACKEND PAGE (ADDED, NOTHING CHANGED ABOVE) ⭐⭐⭐ -->
+    <div id="backendPage">
+      <h2>Message Received</h2>
+      <p>Thank you for contacting us. We have received your message and <strong>we will reach you out soon.</strong></p>
+
+      <h3>Your Submission:</h3>
+      <p><strong>Name:</strong> <span id="b_name"></span></p>
+      <p><strong>Email:</strong> <span id="b_email"></span></p>
+      <p><strong>Message:</strong></p>
+      <p id="b_message" style="white-space:pre-wrap;"></p>
+    </div>
+
+  </main>
+
+  <footer class="sitefoot">© 2025 Harvest Blue Mission</footer>
+
+  <!-- ⭐⭐⭐ ADDED SCRIPT (VALIDATION + BACKEND PAGE) ⭐⭐⭐ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const form = document.getElementById("contactForm");
+      const backendPage = document.getElementById("backendPage");
+
+      // Validation function for email
+      function validateEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+      }
+
+      // Validation function for number (7–15 digits)
+      function validateNumber(number) {
+        const numberPattern = /^[0-9]{7,15}$/;
+        return numberPattern.test(number);
+      }
+
+      document.getElementById("sendBtn").addEventListener("click", function(event){
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Number is extracted from message if user typed it in message
+        // (since you didn't change form fields, we check if message includes digits)
+        const extractedNumber = message.replace(/\D/g, "");
+
+        // Validate email format
+        if (!validateEmail(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        // Validate number inside message
+        if (extractedNumber.length < 7 || extractedNumber.length > 15) {
+          alert("Please include a valid phone number (7–15 digits) inside the message box.");
+          return;
+        }
+
+        // Fill backend
+        document.getElementById("b_name").textContent = name;
+        document.getElementById("b_email").textContent = email;
+        document.getElementById("b_message").textContent = message;
+
+        // Hide form and show backend
+        form.style.display = "none";
+        backendPage.style.display = "block";
+      });
+    });
+  </script>
+
+</body>
+</html>

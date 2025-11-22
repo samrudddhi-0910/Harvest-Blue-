@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harvest Blue Mission</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+  <style>
+    .carousel {
+      width: 100%;
+      max-width: 750px;
+      margin: 2.5rem auto;
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+      border: 6px solid white;      
+      transition: transform 0.3s ease;
+    }
+
+    .carousel:hover {
+      transform: scale(1.06);
+    }
+
+    .carousel-images {
+      display: flex;
+      padding: 0 6px;               
+      box-sizing: border-box;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      flex: 0 0 100%;               
+      margin-right: 8px;             
+      height: 330px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: white;
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-images img:last-child {
+      margin-right: 0;               
+    }
+
+    .carousel-images img:hover {
+      transform: scale(1.04);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      border-radius: 6px;
+    }
+    .carousel-btn.left { left: 10px; }
+    .carousel-btn.right { right: 10px; }
+  </style>
+</head>
+
+<body style="background: var(--page-bg-mid);"> 
+
+  <header class="topbar">
+    <div style="text-align:center;">
+      <div style="font-size:0.95rem; opacity:0.95;">Harvest Blue Secure Tommorow</div>
+      <div style="font-size:0.82rem; opacity:0.9;">
+       <p style="text-align: left;"> Clean water starts with a single drop . Learn how rainwater Harvesting can provide safe, sustainable water for sanitation, hygiene and health- today and for generation to come.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mainnav">
+    <div class="logo-slot">
+      <div class="logo-placeholder" aria-hidden="true"></div>
+      <div style="font-weight:700;">Harvest Blue</div>
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html" class="nav-home"><span></span>Home</a></li>
+      <li><a href="how-it-works.html" class="nav-item"><span></span>How It Works</a></li>
+      <li><a href="projects.html" class="nav-item"><span></span>Projects</a></li>
+      <li><a href="sdg6.html" class="nav-item"><span></span>SDG 6</a></li>
+      <li><a href="contact.html" class="nav-item"><span></span>Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Protecting water — sustaining communities</h1>
+
+    <div class="carousel">
+      <button class="carousel-btn left" onclick="moveSlide(-1)">‹</button>
+
+      <div class="carousel-images" id="carouselImgs">
+        <img src="https://www.seva-ngo.in/files/Projects/Home6.jpg" alt="Water conservation">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Rainwater_Harvesting_and_Plastic_Pond_2.JPG/250px-Rainwater_Harvesting_and_Plastic_Pond_2.JPG" alt="Rainwater harvesting">
+        <img src="https://earth5r.org/wp-content/uploads/2024/03/Rain-Water-Harvesting-Awareness-Bangalore-Community-Volunteer-Earth5R-Mumbai-India-Environmental-NGO-1230x767-1.jpg" alt="Community water project">
+      </div>
+
+      <button class="carousel-btn right" onclick="moveSlide(1)">›</button>
+    </div>
+
+    <pre style="font-family: Arial, Helvetica, sans-serif;">
+       What is rainwater harvesting? 
+       Rain water harvesting is the simple, ancient practice of Collecting and storing rain that falls on rooftops, pavements or open land. instead of letting this precious water run off into drains or evaporate, it is captured, filtered and used for drinking, cooking, bathing, handwash, toilet flushing, laundry, and irrigation.
+       "Once inch of rain on a 1,000 sq ft roof can yield over 600 gallons of water"- U.S. environmental protection agency (EPA) 
+      </pre>
+
+    <div class="cards" aria-label="program cards">
+      <div class="card">
+        <h3>Rainwater Harvesting</h3>
+        <p>We design rooftop and landscape catchment systems, storage tanks and recharge features so communities and schools can retain seasonal rainfall for year-round use.</p>
+      </div>
+      <div class="card">
+        <h3>Sanitation Awareness</h3>
+        <p>Behavior-change workshops, school WASH curricula, menstrual hygiene management (MHM) training and low-cost toilet upgrades to reduce disease and improve dignity.</p>
+      </div>
+      <div class="card">
+        <h3>School Workshops</h3>
+        <p>Hands-on sessions at schools — pupils learn to build simple harvesting models, measure rainfall, and carry out hygiene campaigns that multiply benefits across families.</p>
+      </div>
+    </div>
+
+    <section style="margin-top:1.6rem;">
+      <h2>Upcoming News & Updates</h2>
+
+      <div style="background:#ffffffd0; padding:1rem; border-radius:10px; line-height:1.6;">
+        <ul>
+          <li><strong>📢 Feb 2026:</strong> Launching new rainwater tanks in rural schools.</li>
+          <li><strong>🌧️ March 2026:</strong> Community workshop on rooftop harvesting — registrations open.</li>
+          <li><strong>🏫 April 2026:</strong> Hygiene awareness campaigns in 20+ schools.</li>
+          <li><strong>📊 May 2026:</strong> Release of our water quality monitoring report.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="stats" role="list"> <div class="stat"> <strong>~2.1 billion people</strong><br/>still lack safely managed drinking water services (recent global monitoring). 
+    </div> 
+    <div class="stat"> <strong>3.4+ billion people</strong><br/>lack safely managed sanitation services — highlighting urgent need for school & community sanitation. 
+    </div>
+     <div class="stat"> 
+      <strong>Huge impact on health</strong><br/>unsafe water and poor sanitation contribute to disease, missed school days and lost livelihoods.
+     </div>
+     </div>
+      <p style="margin-top:0.8rem; color:#053b45;"> Sources and further reading (select recent authoritative resources): UN SDG 6 overview; WHO/UNICEF Joint Monitoring Programme (JMP) and progress reports; review literature on rainwater harvesting and UNESCO case studies. Links included below for research and deeper reading. </p>
+         <ul>
+           <li><a href="https://www.un.org/sustainabledevelopment/water-and-sanitation/" target="_blank" rel="noopener">UN: SDG 6 overview — water & sanitation</a></li> <li><a href="https://www.who.int/news-room/fact-sheets/detail/drinking-water" target="_blank" rel="noopener">WHO: Drinking-water (fact sheet)</a></li> <li>
+            <a href="https://www.mdpi.com/2073-4441/14/20/3200" target="_blank" rel="noopener">MDPI review: Rainwater harvesting research (bibliometrics)</a></li>
+             <li><a href="https://www.unesco.org/en/articles/pembamoto-rainwater-harvesting-project" target="_blank" rel="noopener">UNESCO: Pembamoto rainwater harvesting case</a></li> 
+            </ul> </section> <section style="margin-top:1.6rem;"> 
+              <h2>How you can help</h2> 
+              <p> Volunteer with our school workshops, sponsor a village tank, or support monitoring equipment. Simple actions — like teaching water-safe storage and building a rooftop gutter + storage barrel — can reduce waterborne disease and build climate resilience. </p>
+             </section>
+  </main>
+
+  <footer class="sitefoot">
+    © 2025 Harvest Blue Mission — all rights reserved
+  </footer>
+
+  <script>
+    let index = 0;
+    function moveSlide(direction) {
+      const track = document.getElementById("carouselImgs");
+      const total = track.children.length;
+      index = (index + direction + total) % total;
+      track.style.transform = `translateX(${-index * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>

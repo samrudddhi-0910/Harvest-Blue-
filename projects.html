@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Harvest Blue Mission</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+  <!-- INTERNAL CSS -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Times New Roman", serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background: #f6fbff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 1.8rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h1, h2, h3, p {
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+      margin-top: 2rem;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .donation-box {
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 10px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .donation-box form {
+      width: 100%;
+    }
+
+    .donation-box input {
+      border-radius: 6px;
+      border: 1px solid #bbe1ff;
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    footer.sitefoot {
+      background: var(--header-dark);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* Graph Box Styling */
+    .graph-section {
+      margin: 50px auto;
+      padding: 25px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      max-width: 700px;
+      border: 1px solid #e3f3ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .graph-wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: flex-end;
+      justify-content: center;
+      height: 250px;
+      width: 100%;
+      padding-bottom: 10px;
+    }
+
+    .bar {
+      width: 50px;
+      background: #0a74da;
+      border-radius: 6px;
+      transition: 0.8s;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding-bottom: 4px;
+    }
+
+    .month-labels {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 10px;
+      color: #003355;
+      font-weight: bold;
+    }
+
+    /* Tips Section */
+    .tips-section, .help-section {
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .tips-section {
+      background: #e6f7ff;
+    }
+
+    .help-section {
+      background: #fff4e6;
+    }
+
+    .tips-section ul, .help-section ul {
+      line-height: 1.6;
+      padding-left: 20px;
+    }
+
+    .tips-section h2, .help-section h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div style="text-align:center;">
+      <div style="font-size:0.95rem; opacity:0.95;">Harvest Blue — Projects In Schools & Communities</div>
+    </div>
+  </header>
+
+  <nav class="mainnav">
+    <div class="logo-slot">
+      <div class="logo-placeholder"></div>
+      <div style="font-weight:700;">Harvest Blue</div>
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html"><span></span>Home</a></li>
+      <li><a href="how-it-works.html"><span></span>How It Works</a></li>
+      <li><a href="projects.html" class="active"><span></span>Projects</a></li>
+      <li><a href="sdg6.html"><span></span>SDG 6</a></li>
+      <li><a href="contact.html"><span></span>Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>School Sanitation & Rainwater Projects</h1>
+
+    <p>
+      Harvest Blue partners with NGOs and schools to deliver practical sanitation and rainwater harvesting solutions. 
+      Our projects have three core goals:<br>
+      (1) Safe, private toilets — especially for girls, including menstrual hygiene facilities<br>
+      (2) Rainwater harvesting systems that supply handwashing stations and drinking water<br>
+      (3) Fun, age-appropriate hygiene education that creates lifelong habits
+    </p>
+
+    <p>
+      We don’t just build — we teach. Students help maintain the systems, learning water conservation and environmental care. 
+      Parents and teachers receive training so every project lasts for years. We also test smart, low-cost innovations like solar pumps and efficient irrigation — solutions we’re now scaling to villages and entire communities.
+    </p>
+
+    <p><strong>Project Highlights So Far</strong></p>
+    <ul style="line-height:1.8; max-width:700px; margin:1.5rem auto; text-align:left;">
+      <li>Over 50 schools now have safe latrines and handwashing stations</li>
+      <li>More than 200,000 litres of rainwater harvested and used daily</li>
+      <li>Student-led hygiene clubs spreading awareness in every school</li>
+      <li>Ongoing workshops for teachers and parents on maintenance and sustainability</li>
+    </ul>
+
+    <section class="projects-grid" aria-label="projects">
+      <article class="project-item">
+        <img src="https://images.squarespace-cdn.com/content/v1/59ad4af1d2b857c4b68368ac/1628431882569-CCZZ3COXTV10E2C5VRYN/ARK_WendyAllenDesigns_Shalbourne+Sparkling+Streams+Rain+Garden.jpg?format=2500w" alt="Rain garden">
+        <div style="padding:12px;">
+          <h3>Green School Rain Garden</h3>
+          <p>Rain gardens + infiltration trenches to capture runoff and prevent flooding.</p>
+        </div>
+      </article>
+
+      <article class="project-item">
+        <img src="https://cdn1.byjus.com/wp-content/uploads/2023/05/Rainwater-harvesting-1.png" alt="Rooftop harvesting">
+        <div style="padding:12px;">
+          <h3>Rooftop Harvest & Storage Tanks</h3>
+          <p>Catchment systems supplying water for handwashing and drinking stations.</p>
+        </div>
+      </article>
+
+      <article class="project-item">
+        <img src="https://cdn.shopify.com/s/files/1/0829/4323/files/Cut_Section_Final_600x600.jpg?v=1570472530" alt="Sanitation facility">
+        <div style="padding:12px;">
+          <h3>Sanitation Upgrade Program</h3>
+          <p>Improved latrines and hygiene facilities for safer, cleaner schools.</p>
+        </div>
+      </article>
+    </section>
+
+    <p style="margin-top:2rem;">
+      All our designs are intentionally low-tech and low-cost — so schools and villages can maintain them easily for decades.
+    </p>
+
+    <section class="tips-section">
+      <h2>Tips You Can Follow at Home</h2>
+      <ul>
+        <li>Collect rainwater from your roof using barrels — perfect for gardens or cleaning</li>
+        <li>Set up a simple handwashing station for kids at home</li>
+        <li>Install low-flow taps and fix leaks to save water daily</li>
+        <li>Compost kitchen waste and dispose of trash responsibly</li>
+        <li>Teach children proper handwashing — 20 seconds with soap!</li>
+      </ul>
+    </section>
+
+    <section class="donation-box">
+      <h2>Support Our Next School or Village Project</h2>
+      <form id="donationForm">
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="number" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Donation Amount (₹)</label>
+        <input type="number" id="donationAmount" name="amount" min="100" required placeholder="e.g. 500">
+
+        <button type="submit" id="donationBtn">Send Donation</button>
+      </form>
+    </section>
+
+    <section class="help-section">
+      <h2>Other Ways You Can Help</h2>
+      <ul>
+        <li>Volunteer to build or maintain facilities in schools and villages</li>
+        <li>Spread the word about water conservation and hygiene</li>
+        <li>Organize local fundraisers or material drives</li>
+        <li>Ask your company to sponsor a project or donate equipment</li>
+        <li>Share your skills — teaching, carpentry, plumbing, or outreach</li>
+      </ul>
+      <p>Every action — big or small — brings clean water and safe sanitation to more children and families.</p>
+    </section>
+
+    <section class="graph-section">
+      <h2>Funds Raised This Year (Live Update)</h2>
+      <div id="graphContainer">
+        <div class="graph-wrapper">
+          <div class="bar" id="m1"><span></span></div>
+          <div class="bar" id="m2"><span></span></div>
+          <div class="bar" id="m3"><span></span></div>
+          <div class="bar" id="m4"><span></span></div>
+          <div class="bar" id="m5"><span></span></div>
+          <div class="bar" id="m6"><span id="month6Value"></span></div>
+        </div>
+        <div class="month-labels">
+          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="sitefoot">© 2025 Harvest Blue Mission</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const donationForm = document.getElementById("donationForm");
+      const donationAmountInput = document.getElementById("donationAmount");
+
+      donationForm.addEventListener("submit", function(event){
+        event.preventDefault();
+        alert("Thank you! Your donation has been sent successfully!");
+
+        let added = Number(donationAmountInput.value) || 0;
+        let base = 79000;
+        let newTotal = base + added;
+
+        document.getElementById("month6Value").textContent = newTotal;
+        updateGraphBar(5, newTotal);
+        donationForm.reset();
+      });
+
+      const amounts = [40000, 45000, 49000, 58000, 63000, 79000];
+      const bars = ["m1","m2","m3","m4","m5","m6"];
+      const maxAmount = Math.max(...amounts, 100000);
+      const maxHeight = 250;
+
+      function updateGraphBar(index, value) {
+        const bar = document.getElementById(bars[index]);
+        const span = bar.querySelector("span");
+        span.textContent = value;
+        bar.style.height = (value / maxAmount) * maxHeight + "px";
+      }
+
+      bars.forEach((id, index) => {
+        setTimeout(() => {
+          updateGraphBar(index, amounts[index]);
+        }, index * 200);
+      });
+    });
+  </script>
+
+</body>
+</html>
